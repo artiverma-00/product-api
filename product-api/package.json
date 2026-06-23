@@ -1,0 +1,28 @@
+{
+  "name": "product-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "prisma validate && node --check server.js && node --check controllers/productController.js && node --check routes/productRoutes.js && node --check lib/databaseUrl.js && node --check prisma/seed.js",
+    "seed": "node prisma/seed.js",
+    "test": "npm run check",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^6.19.3"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
